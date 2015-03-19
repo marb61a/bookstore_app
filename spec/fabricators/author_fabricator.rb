@@ -1,0 +1,3 @@
+Fabricator(:author) do
+  
+end
