@@ -6,4 +6,8 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
     #require 'pry';binding.pry
   end
+  def new
+    @author = Author.new
+  end
+  
 end

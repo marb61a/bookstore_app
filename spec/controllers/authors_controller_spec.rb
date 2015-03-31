@@ -29,7 +29,14 @@ describe AuthorsController do
       #author = Fabricate(:author)
       get :show, id: author
       expect(response).to render_template('show')
-    end
-    
+    end   
   end
+  
+  describe "GET #new" do
+    it "assigns a new author object to @author variable" do
+      get :new
+      expect(assigns(:author)).to be_instance_of(Author)
+    end
+   end
+  
 end
