@@ -47,11 +47,13 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'guard-rspec'
   gem 'fabrication', '2.11.3'
+  
 end
 
 group :test do
   gem 'capybara', '2.4.1'
   gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 group :development do
