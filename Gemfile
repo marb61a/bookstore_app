@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,7 +39,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap_form', '~> 2.1.1'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.10'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -56,18 +56,23 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'guard-rspec'
   gem 'fabrication', '2.11.3'
-  
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'capybara', '2.4.1'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver', '2.43'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
 end
 
 group :development do
   gem 'pry', '0.10.0'
   gem 'pry-nav', '0.2.4'
+  gem 'thin', '1.6.2'
+  gem 'letter_opener', '1.2.0'
 end
 
 
