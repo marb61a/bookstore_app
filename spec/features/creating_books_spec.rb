@@ -5,7 +5,7 @@ feature 'Creating Books' do
   let!(:author1) { Fabricate(:author) }
   let!(:author2) { Fabricate(:author) }
 
-   scenario 'create a valid book' do
+  scenario 'create a valid book' do
     visit root_path
     click_link 'Books', exact: false
     click_link 'Add New book'
