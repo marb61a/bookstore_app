@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'catalogs#index'
 
   get '/add_publisher', to: 'admin/publishers#new', as: 'add_publisher'
@@ -9,4 +11,5 @@ Rails.application.routes.draw do
   resources :users
   resources :publishers, except: [:new]
   resources :books, except: [:new]
+  resource :session, only: [:create]
 end
