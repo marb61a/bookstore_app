@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SessionsController do
-  let(:user) {Fabricate(:user)}
+  let(:user) { Fabricate(:user) }
   
   describe "GET #new" do
     context "unauthenticated users" do
@@ -11,7 +11,11 @@ describe SessionsController do
       end
     end
     context "authenticated users" do
-     
+     it "redirects to the home page for authenticated users" do
+        session[:user_id] = user.id
+        get :new
+        expect(response).to redirect_to root_path
+      end
     end
   end
   
@@ -27,12 +31,18 @@ describe SessionsController do
       it "sets the flash message" do
         expect(flash[:success]).to eq('Sign in successful.')
       end
+      
+      it "creates a session record for valid inputs" do
+        expect(session[:user_id]).to eq(user.id)
+      end
     end
     
     context "unsuccessful sign in" do
-      
-    end   
-    
+      it "renders the sign in template" do
+        post :create, { email: user.email, password: "mypassword" }
+        expect(response).to render_template :new
+      end
+    end    
   end
   
 end

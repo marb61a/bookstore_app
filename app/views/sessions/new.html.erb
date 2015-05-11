@@ -1,2 +1,31 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<section>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <%= bootstrap_form_tag url: signin_path, html: { class: 'sign_in' } do |f| %>
+        <header>
+          <h3 class='titles'>Sign in</h3>
+          </header>
+
+          <fieldset>
+            <%= f.email_field :email, label: 'Email Address' %>
+            <%= f.password_field :password %>
+          </fieldset>
+
+          <fieldset class="form-group action">
+            <%= f.submit "Sign in", class: "btn btn-default" %>
+            <%= link_to "Forgotten Password?", reset_password_path %>
+          </fieldset>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <hr>
+      <fieldset class="form-group" id="signup-link">
+        Or<br>
+        <%= link_to "Sign up", signup_path %>
+      </fieldset>
+    </div>
+  </div>
+</section>
