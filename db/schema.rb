@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505145842) do
+ActiveRecord::Schema.define(version: 20150517140327) do
 
   create_table "authors", force: true do |t|
     t.string   "first_name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150505145842) do
     t.decimal  "price",                   precision: 16, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "book_cover"
   end
 
   add_index "books", ["publisher_id"], name: "index_books_on_publisher_id"
@@ -51,5 +52,13 @@ ActiveRecord::Schema.define(version: 20150505145842) do
   end
 
   add_index "publishers", ["name"], name: "index_publishers_on_name", unique: true
+
+  create_table "users", force: true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "password_digest"
+    t.boolean "admin",           default: false
+  end
 
 end
