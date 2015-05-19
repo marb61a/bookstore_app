@@ -1,11 +1,10 @@
 require 'spec_helper'
 
-describe AuthorsController do
+describe Admin::AuthorsController do
   let(:admin) { Fabricate(:admin) }
-  let(:user) { Fabricate(:user) }
-  
+
   before { set_admin_user admin }
-  
+
   describe "GET #new" do
     it_behaves_like "requires sign in" do
       let(:action) { get :new }
