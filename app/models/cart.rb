@@ -1,6 +1,6 @@
 class Cart < ActiveRecord::Base
-  has_many :cart_items, dependent: destroy
-  has_many :books, through: :cart_items 
+  has_many :cart_items, dependent: :destroy
+  has_many :books, through: :cart_items
   
   def add_book_to_items(book_id)
     cart_item = cart_items.where(book_id: book_id).first
