@@ -26,6 +26,9 @@ gem 'mini_magick', '3.8.0'
 
 gem 'figaro', '0.7.0'
 
+# Kaminari handles pagination
+gem 'kaminari', '0.16.1'
+
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
