@@ -1,0 +1,14 @@
+<html>
+  <head></head>
+  <body>
+    Dear <%= @customer.full_name %><br>
+    <p>Thank you for your order, the details can be found below</p>
+      
+    <% @order.order_items.each do |item| %>  
+    <p><%= item.quantity %> &times; <%= item.book.title %><%= number_to_currency("#{item.price * item.quantity}") %></p>
+    <% end %>
+    
+    <p>Warm Regards</p><br>
+    The Bookstore Sales Team
+  </body>
+</html>
