@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 feature 'Editing Publishers' do
   let(:admin) { Fabricate(:admin) }
   let(:user) { Fabricate(:user) }

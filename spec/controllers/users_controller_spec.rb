@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-describe 'UsersController' do
-  describe 'GET new' do
+describe UsersController do
+
+  describe "GET new" do
     it "assigns a new user to @user" do
       get :new
       expect(assigns(:user)).to be_a_new(User)
@@ -12,8 +13,8 @@ describe 'UsersController' do
       expect(response).to render_template :new
     end
   end
-  
-  describe 'GET show' do
+
+  describe "GET show" do
     it "displays a user profile" do
       john = Fabricate(:user)
       get :show, id: john.id
@@ -26,8 +27,8 @@ describe 'UsersController' do
       expect(response).to render_template :show
     end
   end
-  
-   describe "POST create" do
+
+  describe "POST create" do
     context "successful user sign up" do
       it "redirects to the user show path" do
         post :create, user: Fabricate.attributes_for(:user)
