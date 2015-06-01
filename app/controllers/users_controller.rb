@@ -29,5 +29,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation,
                                   addresses_attributes: [:address_line1, :address_line2, :city, :zipcode])
   end
-  
 end
