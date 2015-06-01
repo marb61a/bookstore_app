@@ -54,6 +54,13 @@ gem 'bcrypt', '~> 3.1.10'
 # gem 'debugger', group: [:development, :test]
 
 #  Testing related group
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
   gem 'spring-commands-rspec'

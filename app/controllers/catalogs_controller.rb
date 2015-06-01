@@ -5,12 +5,20 @@ class CatalogsController < ApplicationController
   end
 
   def show
-      @book = Book.find params[:id]   
+    begin
+      @book = Book.find params[:id]
+      set_cart_if_session
+    rescue ActiveRecord::RecordNotFound
+      flash[:danger] = "Unfortunately that book is sold out"
+      redirect_to catalogs_path
+    end
   end
-  
-  def search
-  end
-  
-  private
 
+  def search
+    @books = Book.search_by_title(params[:search_word])
+  end
+private
+  def set_cart_if_session
+    set_cart if session[:cart_id]
+  end
 end
