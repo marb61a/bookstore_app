@@ -1,4 +1,4 @@
-class BooksController < BaseController
+class Admin::BooksController < Admin::BaseController
   before_action :set_book, except: [:index, :new, :create]
 
   def index
@@ -18,7 +18,6 @@ class BooksController < BaseController
 
   def create
     @book = Book.new(book_params)
-#    require 'pry'; binding.pry
     if @book.save
       flash[:success] = 'Book has been created.'
       redirect_to [:admin, @book]
