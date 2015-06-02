@@ -19,6 +19,19 @@ def sign_in_as(user)
   expect(page).to have_content("Sign in successful.")
 end
 
+def sign_user_out
+  visit root_path
+  click_link 'Sign out'
+  expect(page).to have_content("You have been signed out.")
+end
+
+def deny_access_to_non_admins(user, link)
+  sign_user_out
+  sign_in_as(user)
+  visit root_path
+  expect(page).not_to have_link("#{link}", exact: true)
+end
+
 def set_current_cart(cart=nil)
   session[:cart_id] = (cart || Fabricate(:cart)).id
 end

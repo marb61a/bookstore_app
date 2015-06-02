@@ -9,6 +9,27 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build
     transfer_cart_items
+    if @order.valid
+      total_sale = @cart.total_sale_in_cents
+      Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+      token = params[:stripeToken]
+      begin
+        charge = Stripe::Charge.create(
+          amount: total_sale,
+          currency: "usd",
+          card: token
+        )
+        @order.save
+        @cart.destroy
+        session[:cart_id] = nil
+        OrderMailer.notify_on_successful_order(current_user, @order).deliver
+        flash[:success] = "Order has been created."
+        redirect_to root_path
+      rescue Stripe::CardError => e
+        flash[:danger] = "Order has not been created.\n" + e.message
+        redirect_to root_path
+      end
+    end
   end
   
   private

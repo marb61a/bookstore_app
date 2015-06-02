@@ -24,9 +24,7 @@ describe Admin::PublishersController do
     it "assigns the publishers objects to @publishers variable" do
       publisher1 = Fabricate(:publisher)
       publisher2 = Fabricate(:publisher)
-
       get :index
-      # require 'pry'; binding.pry
       expect(assigns(:publishers)).to match_array([publisher1, publisher2])
     end
 
