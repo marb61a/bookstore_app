@@ -8,7 +8,7 @@ feature 'Creating Publishers' do
     sign_in_as admin
   end
 
-scenario 'access to non-admin users not allowed' do
+  scenario 'access to non-admin users not allowed' do
     deny_access_to_non_admins(user, 'Publishers')
   end
 
