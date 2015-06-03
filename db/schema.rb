@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602132320) do
+ActiveRecord::Schema.define(version: 20150603103513) do
 
   create_table "addresses", force: true do |t|
     t.string   "address_line1"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20150602132320) do
     t.string  "email"
     t.string  "password_digest"
     t.boolean "admin",           default: false
+    t.string  "token"
   end
 
 end

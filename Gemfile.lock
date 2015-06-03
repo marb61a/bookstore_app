@@ -264,7 +264,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0)
   bootstrap_form (~> 2.1.1)
   capybara (= 2.4.1)
-  capybara-webkit
+  capybara-webkit (= 1.5.1)
   carrierwave-dropbox (= 1.2.1)
   coffee-rails (~> 4.0.0)
   database_cleaner

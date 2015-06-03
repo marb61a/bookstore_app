@@ -77,7 +77,7 @@ group :test do
   gem 'faker'
   gem 'shoulda-matchers'
   gem 'selenium-webdriver', '2.43'
-  gem 'capybara-webkit'
+  gem 'capybara-webkit', '1.5.1'
   gem 'database_cleaner'
 end
 
