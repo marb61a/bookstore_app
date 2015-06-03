@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe OrdersController do
-  let (:john) {Fabricate(:user)}
-  before {set_current_user(:john) }
-  
+  let(:john) { Fabricate(:user) }
+  before { set_current_user(john) }
+
   describe "GET #new" do
     it "assigns a new order object to @order variable" do
       get :new
@@ -21,7 +21,7 @@ describe OrdersController do
       expect(response).to redirect_to signin_path
     end
   end
-  
+
   describe "POST #create" do
     let(:cart) { Fabricate(:cart) }
     let!(:book) { Fabricate(:book) }
@@ -60,5 +60,4 @@ describe OrdersController do
       expect(ActionMailer::Base.deliveries.last.to).to eq([john.email])
     end
   end
-
 end
