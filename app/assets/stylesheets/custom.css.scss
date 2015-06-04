@@ -5,8 +5,8 @@
 @import "bootstrap";
 
 body {
-  background: #D1F6FE; /*#C879B2; */
-  color: #fff;
+  background: #CCBBFE; /*#C879B2; */
+  color: #cdcdcd;
   font-family: Georgia, Times, serif;
 }
 
@@ -15,25 +15,30 @@ body {
   border-right: 2px solid #F7F7F7; */
   margin-top: 0px;
   border-right: 2px solid #F7F7F7;
+  color: #000;
 }
 
 .sidebar-link {
   list-style-type: none;
   padding-left: 10px;
   margin-top: 0px;
+  color: #000;
 }
 
 .sidebar-link li {
   padding-bottom: 10px;
+  color: #000;
 }
 
 .sidebar-hr {
   margin-bottom: 7px;
   margin-top: 7px;
+  color: #000;
 }
 
 .sidebar-header {
   margin-left: 10px;
+  color: #000;
 }
 
 .left, .inner {
@@ -45,15 +50,18 @@ body {
   background: #F7F7F7;
   padding: 0.075em 1em 0.5em 1em;
   margin-top: 15px;
+  color: #000;
 /*  border: 2px solid #485454; */
 }
 
 .cartless {
   color: #F4B400;
+  color: #000;
 }
 
 .details {
   padding-bottom: 10px;
+  color: #000;
 }
 
 .titles {
@@ -63,7 +71,7 @@ body {
   background-color: #F4B400; /* #CBF1FE; */
 /*  background-color: #0D8C40; /* #CBF1FE; */
 /*  color: #0D2C40; */
-  color: #fff;
+  color: #000;
   font-size: 100%;
   text-transform: uppercase;
   display: block;
@@ -80,6 +88,7 @@ body {
 
 .book-title {
   margin-right: 10px;
+  color: #000;
 }
 
 footer {
@@ -87,6 +96,7 @@ footer {
   margin-top: 20px;
   border-top: 2px solid #F7F7F7;
   padding-top: 5px;
+  color: #000;
 }
 
 .alert {
@@ -106,21 +116,24 @@ footer {
 */
 
 .price-class {
-  color: #fff000;
+  color: #000;
   display: inline-block;
   margin-top: 5px;
 }
 
 #clear-cart-btn, #checkout-btn {
   display: inline-block;
+  color: #000;
 }
 
 #cart-total {
   padding-bottom: 1.5em;
+  color: #000;
 }
 
 #signup-link {
   font-size: 200%;
+  color: #000;
 }
 
 .user-list {
@@ -129,13 +142,15 @@ footer {
 
 #new-user-link {
   padding-top: 30px;
+  color: #000;
 }
 
 #paginate {
   border-bottom: 1px solid #F7F7F7;
   margin-bottom: 15px;
+  color: #000;
 }
 
 a {
-  color: #fff;
+  color: #000;
 }
