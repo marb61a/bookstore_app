@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature 'Creating Publishers' do
-  let(:admin){Fabricate(:admin)}
-  let(:user){Fabricate(:user)}
+  let(:admin) { Fabricate(:admin) }
+  let(:user) { Fabricate(:user) }
 
   before do
     sign_in_as admin
