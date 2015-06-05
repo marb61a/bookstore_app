@@ -10,6 +10,10 @@ body {
   font-family: Georgia, Times, serif;
 }
 
+.container{
+  color: #000;
+} 
+
 .content {
 /*  border-left: 2px solid #F7F7F7;
   border-right: 2px solid #F7F7F7; */
@@ -51,7 +55,6 @@ body {
   padding: 0.075em 1em 0.5em 1em;
   margin-top: 15px;
   color: #000;
-/*  border: 2px solid #485454; */
 }
 
 .cartless {
@@ -67,10 +70,7 @@ body {
 .titles {
   padding-top: 10px;
   margin-bottom: 20px;
-/*  background-color: #CBF1FE; */
-  background-color: #F4B400; /* #CBF1FE; */
-/*  background-color: #0D8C40; /* #CBF1FE; */
-/*  color: #0D2C40; */
+  background-color: #F4B400; 
   color: #000;
   font-size: 100%;
   text-transform: uppercase;
@@ -81,9 +81,9 @@ body {
 
 .table-shift {
   margin-left: -70px;
-/*  border: 1px dashed blue; */
   width: 40em;
   padding-left: -20px;
+  color: #000;
 }
 
 .book-title {
@@ -102,10 +102,12 @@ footer {
 .alert {
   text-align: center;
   font-weight: bold;
+  color: #000;
 }
 
 .btnwidth {
   width: 5em;
+  color: #000;
 }
 
 /*
@@ -138,6 +140,7 @@ footer {
 
 .user-list {
   padding-bottom: 5px;
+  color: #000;
 }
 
 #new-user-link {
