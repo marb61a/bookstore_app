@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Author.create!(first_name: 'Agatha', last_name: 'Christie')
+  Author.create!(first_name: 'Agatha', last_name: 'Christie')
   Author.create!(first_name: 'James', last_name: 'Chase')
   Author.create!(first_name: 'Sydney', last_name: 'Sheldon')
   Author.create!(first_name: 'Obie', last_name: 'Fernandez')
@@ -54,5 +54,5 @@ Book.create!(title: 'Introduction to Object-oriented Analysis and Design with UM
   book_cover: File.open(File.join(Rails.root, 'app/assets/images/ooa_design.jpg')))
 
 
-  User.create(email:'emmanuel@example.com', first_name:'Emmanuel', last_name:'Asante', password:'password', admin: true)
-  User.create(email:'john@example.com', first_name:'John', last_name:'Doe', password:'password', admin: false)
+User.create(email:'martin@example.com', first_name:'Martin', last_name:'Byrne', password:'password', admin: true)
+User.create(email:'john@example.com', first_name:'John', last_name:'Doe', password:'password', admin: false)
