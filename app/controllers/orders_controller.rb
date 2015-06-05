@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build
     transfer_cart_items
+    
     if @order.valid?
       total_sale = @cart.total_sale_in_cents
       Stripe.api_key = ENV['STRIPE_SECRET_KEY']

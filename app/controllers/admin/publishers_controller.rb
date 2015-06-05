@@ -10,7 +10,6 @@ class Admin::PublishersController < Admin::BaseController
 
   def new
     @publisher = Publisher.new
-#    require 'pry'; binding.pry
   end
 
   def create

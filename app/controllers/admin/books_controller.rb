@@ -61,6 +61,5 @@ class Admin::BooksController < Admin::BaseController
 
     def set_book
       @book = Book.find(params[:id])
-      #require 'pry'; binding.pry
     end
 end

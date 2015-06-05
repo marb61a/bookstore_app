@@ -43,7 +43,6 @@ feature 'Editing Books' do
     fill_in 'Isbn', with: 'John Bull'
     fill_in 'Page count', with: 189
     fill_in 'Price', with: 54.23
-    #Capybara.exact = false
     fill_in 'Description', with: 'John Bull'
     fill_in 'Published at', with: '2014-01-01'
     select 'Wiley', from: 'Publisher'
