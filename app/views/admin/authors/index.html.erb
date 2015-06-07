@@ -1,14 +1,15 @@
 <section>
   <header>
     <% if @authors.empty? %>
-      <h3>No Authors Were Created<h3>
+      <h3>No Authors Created</h3>
     <% else %>
       <h3>All Authors</h3>
+
       <% @authors.each do |author| %>
         <%= link_to author.full_name, [:admin, author] %><hr>
       <% end %>
       <br>
-    <% end %>       
+    <% end %>
   </header>
         <p><%= link_to 'Add New author', new_admin_author_path, class: 'btn btn-success' %></p>        
 </section>

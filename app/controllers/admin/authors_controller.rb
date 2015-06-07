@@ -6,7 +6,7 @@ class Admin::AuthorsController < Admin::BaseController
   end
 
   def show
-    #require 'pry';binding.pry
+
   end
 
   def new
