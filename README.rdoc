@@ -2,4 +2,15 @@ This a Ruby on Rails Demo App for a bookstore. It is built using Test Driven Dev
 
 The following technologies have been used
 - Ruby\Rails
-- RSpec\Capybara for testing
+- RSpec\Guard\Fabricate\Faker for test development
+- Capybara, Database-Cleaner & Selenium for testing
+- Kaminari for pagination of content
+- Dropbox\Carrierwave\Mini-Magick for image handling\storage
+- Stripe for payment management
+- Letter-Opener for email
+- Figaro for security
+- Jquery\Bootstrap for appearance
+- Thin server
+
+**********
+Important - You must install QT for capybara-webkit
