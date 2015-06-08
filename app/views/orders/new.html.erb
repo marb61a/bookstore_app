@@ -5,8 +5,8 @@
   //Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
   </script>
 
-   <%= javascript_tag "Stripe.setPublishableKey('#{ENV['STRIPE_PUBLISHABLE_KEY']}');" %>
-   <%= javascript_include_tag 'order' %>
+  <%= javascript_tag "Stripe.setPublishableKey('#{ENV['STRIPE_PUBLISHABLE_KEY']}');" %>
+  <%= javascript_include_tag 'order' %>
 <% end %>
 
 <div class='row'>
