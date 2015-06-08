@@ -1,19 +1,21 @@
 class OrdersController < ApplicationController
   before_action :require_signin
   before_action :set_cart
-  
+
   def new
     @order = Order.new
   end
-  
+
   def create
     @order = current_user.orders.build
     transfer_cart_items
-    
+
     if @order.valid?
       total_sale = @cart.total_sale_in_cents
+
       Stripe.api_key = ENV['STRIPE_SECRET_KEY']
       token = params[:stripeToken]
+
       begin
         charge = Stripe::Charge.create(
           amount: total_sale,
@@ -32,8 +34,8 @@ class OrdersController < ApplicationController
       end
     end
   end
-  
-  private
+
+private
   def transfer_cart_items
     @cart.cart_items.each do |item|
       @order.order_items << OrderItem.new(

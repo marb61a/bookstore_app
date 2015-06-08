@@ -30,7 +30,7 @@ gem 'figaro', '0.7.0'
 gem 'kaminari', '0.16.1'
 
 # Stripe for handling payments
-gem 'stripe'
+gem 'stripe', '1.15.0'
 
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
