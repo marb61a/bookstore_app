@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
 private
   def set_cart
-    #session[:cart_id] = nil
     if session[:cart_id]
       @cart = Cart.find session[:cart_id]
     else
